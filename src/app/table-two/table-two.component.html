@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Job Title</th>
+        <th scope="col">Region</th>
+        <th scope="col">action</th>
+  
+  
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of result">
+        <th scope="row">{{res.employeeCode}}</th>
+        
+        <td>{{res.jobTitleName}}</td>
+        <td>{{res.region}}</td>
+        <td> <a class="edit"  routerLink="edit/{{res.id}}/{{'st'}}" title="Edit" data-toggle="tooltip"><i class="material-icons"></i></a></td>
+       
+      </tr>
+     
+    </tbody>
+  </table>
+  

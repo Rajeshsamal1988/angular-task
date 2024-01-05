@@ -1,0 +1,44 @@
+<div class="container">
+    <h3>Update Employee Data</h3>
+    <div *ngIf="message" class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Success!</strong> Employee edited successfully!
+        <button (click)="removeMessage()" type="button" data-bs-dismiss="alert" area-lable="close">X</button>
+    </div>
+    <form [formGroup]="editEmp" (ngSubmit)="updateData()">
+        <div *ngIf="idf==='ft'">
+            <div class="mb-3">
+                <label class="form-label">First Name</label>
+                <input type="text" class="form-control" formControlName="firstName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Last Name</label>
+                <input type="text" class="form-control" formControlName="lastName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" formControlName="emailAddress">
+            </div>
+        </div>
+        <div *ngIf="idf==='st'">
+            <div class="mb-3">
+                <label class="form-label">Job Title</label>
+                <input type="text" class="form-control" formControlName="jobTitleName">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Region</label>
+                <input type="text" class="form-control" formControlName="region">
+            </div>
+        </div>
+        <div *ngIf="idf==='tt'">
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="text" class="form-control" formControlName="phoneNumber">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="text" class="form-control" formControlName="emailAddress">
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary" type="submit">Save</button>
+    </form>
+</div>

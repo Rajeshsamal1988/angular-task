@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        
+        <th scope="col">firstName</th>
+        <th scope="col">lastName</th>
+        <th scope="col">Email</th>
+        <th scope="col">Job Title</th>
+      <th scope="col">Region</th>
+      <th scope="col">Phone Number</th>
+     
+      
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let res of result">
+        <td scope="row">{{res.employeeCode}}</td>
+        <td>{{res.firstName}}</td>
+        <td>{{res.lastName}}</td>
+        <td>{{res.emailAddress}}</td>
+        <td>{{res.jobTitleName}}</td>
+        <td>{{res.region}}</td>
+        <td>{{res.phoneNumber}}</td>
+      </tr>
+    </tbody>
+  </table>
